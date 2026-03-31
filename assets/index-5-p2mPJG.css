@@ -2938,3 +2938,8 @@ text-2xl font-bold font-display tracking-tight text-gray-900{
     padding-right: 2em;
 }
 
+#service,
+#business,
+#company{
+    background-color: #61adffa0 !important;
+}
