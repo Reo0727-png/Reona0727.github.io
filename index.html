@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社TDC LAB | 漫画広告のプロフェッショナル</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BXBX2t_x.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-5-p2mPJG.css">
+  <link rel="stylesheet" href="assets/sp_style.css">
+
+  <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+  <link rel="stylesheet" type="text/css"
+    href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+  <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Zen+Old+Mincho&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".slider").bxSlider({
+        mode: 'fade',
+        auto: true,
+        speed: 1000,
+        pager: false,
+        pause: 1000,
+      });
+    });
+  </script>
+<style>
+  #hero-slider-container .slide-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0;
+    animation: hero-slider-final 15s infinite linear !important;
+  }
+
+  #hero-slider-container .slide1 { 
+    background-image: url("images/Create.jpg") !important; 
+    animation-delay: 0s !important; 
+    z-index: 3; 
+  }
+  #hero-slider-container .slide2 { 
+    background-image: url("images/main.jpg") !important; 
+    animation-delay: 5s !important; 
+    z-index: 2; 
+  }
+  #hero-slider-container .slide3 { 
+    background-image: url("images/Pen.jpg") !important; 
+    animation-delay: 10s !important; 
+    z-index: 1; 
+  }
+
+  @keyframes hero-slider-final {
+    0% { opacity: 0; }
+    5% { opacity: 1; } 
+    30% { opacity: 1; } 
+    35% { opacity: 0; } 
+    100% { opacity: 0; }
+  }
+  .central-overlay{
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,50) 0%, rgba(255,255,255,0) 95%)!important;
+    pointer-events: none;
+  }
+
+  #hero-slider-container h1,
+  #hero-slider-container p{
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body class="antialiased">
+  <div id="top"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold font-display tracking-tight text-gray-900">
+        <span class="text-brand-blue">株式会社</span>TDC LAB
+      </a>
+
+      <div class="openbtn1"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+        <div id="g-nav-list">
+          <nav class="gnav_in">
+            <ul class="gnav_menu flex items-center md:space-x-8">
+              <li><a href="#about"
+                  class="font-display font-medium text-gray-600 hover:text-brand-blue transition-colors">About</a></li>
+              <li><a href="#service"
+                  class="font-display font-medium text-gray-600 hover:text-brand-blue transition-colors">Service</a>
+              </li>
+              <li><a href="#works"
+                  class="font-display font-medium text-gray-600 hover:text-brand-blue transition-colors">Works</a></li>
+              <li><a href="#company"
+                  class="font-display font-medium text-gray-600 hover:text-brand-blue transition-colors">Company</a>
+              </li>
+              <li><a href="#qa"
+                  class="font-display font-medium text-gray-600 hover:text-brand-blue transition-colors">Q&A</a></li>
+              <li class="w-full md:w-auto"><a href="#contact"
+                  class="bg-brand-blue text-white font-display font-medium rounded-full hover:bg-blue-700 transition-colors shadow-md md:px-5 md:py-2.5">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+      <!-- Mobile Menu Button (Hamburger) - To be implemented with JS if needed, keeping simple for now -->
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero-slider-container" class="relative h-screen flex items-center justify-center overflow-hidden ">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-black/20 z-10"></div>
+        <div class="central-overlay" style="z-index: 15;"></div>
+        <div class="absolute inset-0" style="z-index: 5;">
+          <div class="slide-bg slide1"></div>
+          <div class="slide-bg slide2"></div>
+          <div class="slide-bg slide3"></div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-20 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
+          Design for <span class="text-brand-blue">Business</span>.<br>
+          Create with <span class="text-brand-orange">Impact</span>.
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          「伝わる」デザインで、ビジネスを加速させる。<br>
+          漫画表現にも強い、制作のプロフェッショナル集団。
+        </p>
+        <a href="#contact"
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-brand-orange rounded-full hover:bg-orange-600 hover:shadow-lg transform hover:-translate-y-1">
+          お問い合わせはこちら
+        </a>
+      </div>
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-blue-50 text-brand-blue text-sm font-bold tracking-wider mb-12"
+            data-aos="fade-up">ABOUT US</span>
+
+          <!-- Block 1: Philosophy -->
+          <div class="mb-20" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
+              クリエイティブで関わる全ての人を幸せに。
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                私たちはクリエイティブの力で、人と人、人と企業をつなぎ、<br>
+                そこに関わるすべての人に喜びと価値を届けることを使命としています。<br>
+                デザイン制作会社として、ただ作るだけでなく、<br>
+                「伝わる」コミュニケーションを誠実に追求し続けます。
+              </p>
+            </div>
+          </div>
+
+          <!-- Block 2: Strengths -->
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
+              「量 × スピード × 質」でビジネスを加速させる。
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                企業理念を体現するための、私たちの実務的な強みです。<br>
+                多様なクリエイティブ実績に基づく<strong class="text-brand-blue font-bold">量産対応力</strong>と、<br>
+                ビジネスの速度を止めない<strong class="text-brand-blue font-bold">迅速な制作体制</strong>。<br>
+                そして、媒体特性を熟知した<strong class="text-brand-blue font-bold">成果につながる設計力</strong>。
+              </p>
+              <p>
+                漫画表現という強力な武器と、確かなデザイン力を掛け合わせ、<br>
+                御社の事業成長をクリエイティブの力で後押しします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-brand-blue font-display font-bold tracking-wider uppercase text-sm">Service</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">事業内容</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-brand-blue">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">TVCM制作</h3>
+            <p class="text-gray-600">
+              企業やブランドの想いを、短時間で強く印象づけるTVCMを企画・制作します。
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 text-brand-orange">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Web広告制作</h3>
+            <p class="text-gray-600">
+              バナー・LP・動画など多様なフォーマットに対応し、目的やターゲットに合わせた最適な表現で訴求力を最大化します。
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">SNS運用</h3>
+            <p class="text-gray-600">
+              SNSの特性を理解した運用設計と、継続的なコンテンツ制作を支援します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="text-brand-blue font-display font-bold tracking-wider uppercase text-sm">Works</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">制作実績</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Work Item 1 -->
+          <div class="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-video current-pointer works-item"
+            data-img="images/tvcm.jpg" data-aos="fade-up">
+            <!-- Placeholder -->
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">Works Image 01
+            </div>
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">TV CM(クリックで拡大)</span>
+            </div>
+          </div>
+          <!-- Work Item 2 -->
+          <div class="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-video current-pointer works-item"
+            data-img="images/tvcm.jpg" data-aos="fade-up" data-aos-delay="200">
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">Works Image 02
+            </div>
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">漫画広告(クリックで拡大)</span>
+            </div>
+          </div>
+          <!-- Work Item 3 -->
+          <div class="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-video current-pointer works-item"
+            data-img="images/tvcm.jpg" data-aos="fade-up" data-aos-delay="300">
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">Works Image 03
+            </div>
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">美容系 LP(クリックで拡大)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <p class="text-sm text-gray-500">※その他、非公開実績多数ございます。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 以下をWorksセクションの下に追記してください -->
+
+    <!-- Our Client Section -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-left mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-semibold mt-2 text-gray-900">取引先一覧</h2>
+          <p class="text-gray-600 mt-4">お取引をいただいているお客様の一部をご紹介いたします。</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 place-items-center" data-aos="fade-up"
+          data-aos-delay="100">
+          <!-- Dummy Logos mimic standard client logos -->
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ1</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ2</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ3</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ4</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ5</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ6</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ7</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ8</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ9</div>
+          <div
+            class="w-full h-20 bg-white border border-gray-100 rounded flex items-center justify-center text-gray-400 font-bold hover:shadow-lg transition-shadow">
+            仮ロゴ10</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-left mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">お客様の声</h2>
+        </div>
+
+        <!-- Carousel風の横スクロール -->
+        <div class="overflow-x-auto flex gap-6 pb-4 snap-x snap-mandatory" data-aos="fade-up" data-aos-delay="100">
+          <!-- C1 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue font-bold mr-3">
+                A</div>
+              <div>
+                <h3 class="font-bold text-gray-900">IT企業 マーケティング担当</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: Web広告制作</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              「デザインのクオリティが高く、クリック率が大幅に改善しました。納品も迅速で、急なキャンペーンにも対応していただき感謝しています。」
+            </p>
+          </div>
+          <!-- C2 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-brand-orange font-bold mr-3">
+                B</div>
+              <div>
+                <h3 class="font-bold text-gray-900">美容クリニック 広報</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: 漫画広告</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              「難しい施術内容を漫画でわかりやすく解説できたおかげで、新規のお問い合わせが昨対比150%に増えました。キャラクターも好評です。」
+            </p>
+          </div>
+          <!-- C3 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold mr-3">
+                C</div>
+              <div>
+                <h3 class="font-bold text-gray-900">食品メーカー EC担当</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: LP制作</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              「商品のシズル感が伝わるデザインで、LPの転換率が上がりました。スマホでの見やすさも考慮されていて、プロの仕事だと感じました。」
+            </p>
+          </div>
+          <!-- C4 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold mr-3">
+                D</div>
+              <div>
+                <h3 class="font-bold text-gray-900">人材系スタートアップ 代表</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: ロゴ・ブランディング</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              「創業時の想いを形にしていただき、社内メンバーの士気も上がりました。長く使えるロゴになりそうで大変満足しています。」
+            </p>
+          </div>
+          <!-- C5 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 font-bold mr-3">E
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">不動産デベロッパー 営業</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: 動画制作</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              &quot;物件の魅力を短時間で伝える動画広告により、内覧予約が増加しました。空撮などの提案も素晴らしかったです。&quot;
+            </p>
+          </div>
+          <!-- C6 -->
+          <div
+            class="min-w-[300px] md:min-w-[350px] bg-white border border-gray-100 p-8 rounded-2xl shadow-sm snap-start">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-bold mr-3">
+                F</div>
+              <div>
+                <h3 class="font-bold text-gray-900">アプリ開発会社 PM</h3>
+                <p class="text-xs text-gray-500">ご利用サービス: UI/UXデザイン</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              「ユーザー視点に立った使いやすいUIデザインを提案していただきました。エンジニアとの連携もスムーズで助かりました。」
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Company Section -->
+    <section id="company" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-brand-blue font-display font-bold tracking-wider uppercase text-sm">Company</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">会社概要</h2>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <dl class="divide-y divide-gray-100">
+              <div class="grid grid-cols-1 md:grid-cols-3 p-6 sm:px-10">
+                <dt class="font-bold text-gray-900 mb-2 md:mb-0">会社名</dt>
+                <dd class="text-gray-600 md:col-span-2">株式会社TDC LAB</dd>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 p-6 sm:px-10">
+                <dt class="font-bold text-gray-900 mb-2 md:mb-0">代表者</dt>
+                <dd class="text-gray-600 md:col-span-2">徳田 孝典</dd>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 p-6 sm:px-10">
+                <dt class="font-bold text-gray-900 mb-2 md:mb-0">設立</dt>
+                <dd class="text-gray-600 md:col-span-2">2025年8月</dd>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 p-6 sm:px-10">
+                <dt class="font-bold text-gray-900 mb-2 md:mb-0">所在地</dt>
+                <dd class="text-gray-600 md:col-span-2">〒000-0000 </dd>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 p-6 sm:px-10">
+                <dt class="font-bold text-gray-900 mb-2 md:mb-0">事業内容</dt>
+                <dd class="text-gray-600 md:col-span-2">漫画広告制作 / インターネット広告代理業</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section id="qa" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="text-brand-blue font-display font-bold tracking-wider uppercase text-sm">Q&A</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">よくあるご質問</h2>
+        </div>
+
+        <div class="space-y-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="border-b border-gray-100 pb-8">
+            <h3 class="font-bold text-lg text-gray-900 flex items-start gap-3">
+              <span class="text-brand-blue shrink-0">Q.</span>
+              制作期間はどのくらいですか？
+            </h3>
+            <p class="text-gray-600 mt-3 pl-8">内容や規模によりますが、通常2週間〜1ヶ月程度です。お急ぎの場合はご相談ください。</p>
+          </div>
+          <div class="border-b border-gray-100 pb-8">
+            <h3 class="font-bold text-lg text-gray-900 flex items-start gap-3">
+              <span class="text-brand-blue shrink-0">Q.</span>
+              漫画広告以外もお願いできますか？
+            </h3>
+            <p class="text-gray-600 mt-3 pl-8">はい。動画制作、Web広告制作、SNS運用、LP制作など幅広く対応しています。</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg text-gray-900 flex items-start gap-3">
+              <span class="text-brand-blue shrink-0">Q.</span>
+              初めての依頼ですが大丈夫でしょうか？
+            </h3>
+            <p class="text-gray-600 mt-3 pl-8">もちろんです。ヒアリングから企画、納品まで丁寧にサポートいたしますので、安心してお任せください。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-blue text-white relative overflow-hidden">
+      <!-- Decoration -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-orange/20 blur-3xl"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-blue-200 font-display font-bold tracking-wider uppercase text-sm">Contact</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">お問い合わせ</h2>
+            <p class="mt-4 text-blue-100">
+              制作のご依頼、お見積もりなど、お気軽にお問い合わせください。<br>
+              通常1営業日以内に返信いたします。
+            </p>
+          </div>
+
+          <form class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <label for="company-name" class="block text-sm font-bold text-blue-100 mb-2">会社名</label>
+              <input type="text" id="company-name"
+                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors"
+                placeholder="株式会社〇〇">
+            </div>
+            <div>
+              <label for="name" class="block text-sm font-bold text-blue-100 mb-2">お名前 <span
+                  class="text-brand-orange">*</span></label>
+              <input type="text" id="name" required
+                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors"
+                placeholder="山田 太郎">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-bold text-blue-100 mb-2">メールアドレス <span
+                  class="text-brand-orange">*</span></label>
+              <input type="email" id="email" required
+                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors"
+                placeholder="example@company.com">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-bold text-blue-100 mb-2">お問い合わせ内容 <span
+                  class="text-brand-orange">*</span></label>
+              <textarea id="message" rows="4" required
+                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors"
+                placeholder="ご用件をご記入ください"></textarea>
+            </div>
+            <div class="text-center pt-4">
+              <button type="button"
+                class="inline-flex items-center justify-center px-10 py-4 font-bold text-brand-blue bg-white rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                送信する
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-2xl font-display font-bold mb-6"><span class="text-brand-blue">株式会社</span>TDC LAB</h2>
+        <p class="text-gray-500 text-sm">
+          &copy; 2025 TDC LAB Inc. All rights reserved.
+        </p>
+      </div>
+
+    </footer>
+  </main>
+
+  <div id="works-modal" class="fixed inset-0 hidden bg-white" style="z-index: 999999 !important;">
+
+    <button id="modal-close"
+      class="absolute top-0 right-0 justify-center px-10 py-4 font-bold text-brand-blue bg-white  hover:bg-gray-100 transition-colors shadow-lg">
+      <span class="text-10xl">&times;</span>
+    </button>
+
+    <div class="w-full h-full flex items-center justify-center p-4 md:p-20">
+      <img id="modal-img" src="" alt="拡大画像" class="max-w-full max-h-full rounded-lg shadow-2xl object-contain">
+    </div>
+
+  </div>
+
+  <a href="#top" class="top-btn"><img src="images/btn.png" alt=""></a>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/5-1-15.js"></script>
+  <div id="app"></div>
+</body>
+
+</html>

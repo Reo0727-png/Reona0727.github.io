@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media only screen and (min-width:1px) and (max-width:767px) {
+
+  /*.openbtn{
+		display: block;
+}
+
+.openbtn_pc{
+		display: none;
+}
+*/
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #top nav {
+    position: relative;
+    z-index: 1;
+    top: 50%;
+  }
+
+  /*========= ナビゲーションのためのCSS ===============*/
+
+  #g-nav .gnav_in {
+    display: none;
+  }
+
+  #g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: #ffffff;
+    /*動き*/
+    transition: all 0.3s;
+    display: block !important;
+  }
+
+  /*アクティブクラスがついたら透過なしにして最前面へ*/
+  #g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  #g-nav .gnav_in {
+    display: none;
+  }
+
+  #g-nav.panelactive .gnav_in {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /*ナビゲーションの縦スクロール*/
+  #g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*ナビゲーション*/
+  #g-nav ul {
+    display: flex !important;
+    /* ★ここを display: none から変更 */
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: static !important;
+    /* 親(gnav_in)で配置するので解除 */
+    transform: none !important;
+  }
+
+
+  /*リストのレイアウト設定*/
+  #g-nav ul.space-x-8 {
+    margin-left: 0 !important;
+    /* space-x-8は左マージンを作るため */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 2. liに勝手についているマージンをリセット */
+  #g-nav ul.space-x-8>*+* {
+    margin-left: 0 !important;
+    /* space-xの仕組み(隣接セレクタ)を無効化 */
+    margin-top: 20px;
+    /* 縦の隙間を代わりに作る */
+  }
+
+  #g-nav li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #g-nav li a {
+    color: #000000;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* 4. Contactボタン(aタグ)を中央に */
+  #g-nav li a.bg-brand-blue {
+    display: flex !important;
+    justify-content: center !important;
+    /* 横方向中央 */
+    align-items: center !important;
+    /* 縦方向中央 */
+    width: 200px !important;
+    height: 54px !important;
+    margin: 0 auto !important;
+    /* ↓ここが重要：左側に残っている余白をゼロにする */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    text-align: center !important;
+    text-indent: 0 !important;
+    letter-spacing: 0;
+  }
+
+
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn1 {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*×に変化*/
+  .openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #878787;
+    width: 45%;
+  }
+
+  .openbtn1 span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn1 span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn1 span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+#g-nav {
+    position: static !important;   /* これで背後のリンクが触れるようになる */
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    pointer-events: auto !important; /* クリックを許可 */
+  }
+
+  /* 2. リストを横並びにする（sliderクラスに依存しない書き方） */
+  #g-nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    column-gap: 2em !important; /* さっきの隙間設定 */
+    justify-content: flex-end !important; 
+    list-style: none !important;
+  }
+
+  /* 3. Contactボタンの設定（既存のものを活かしつつ調整） */
+  #g-nav li a.bg-brand-blue {
+    width: auto !important;
+    height: auto !important;
+    padding: 0.525rem 1.25rem !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    border-radius: 9999px; /* 丸み */
+    white-space: nowrap !important; /* 改行防止 */
+  }
+
+  /* 4. ハンバーガーボタンはPCでは消す */
+  .openbtn1 {
+    display: none !important;
+  }
+}
+
+/* 1. スマホメニューが開いていない時は、メニューを完全に「無効」にする */
+#g-nav {
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* 2. メニューが開いた時（panelactiveクラスがついた時）だけ、クリックを有効にする */
+#g-nav.panelactive {
+  pointer-events: auto;
+}
+
+/* 3. お問い合わせフォームをナビの「膜」より手前に浮かせる（念押し） */
+#contact {
+  position: relative;
+  z-index: 1000;
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+  position: relative;
+  z-index: 1001;
+}
+
+.top-btn {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  z-index: 9999 !important;
+  display: block;
+  pointer-events: auto;
+}
+
